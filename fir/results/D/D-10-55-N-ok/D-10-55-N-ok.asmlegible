@@ -1,0 +1,100 @@
+; BSS
+; ALIGN
+; LABEL x
+; SALLOC 4
+; BSS
+; ALIGN
+; LABEL y
+; SALLOC 4
+; TEXT
+; ALIGN
+; GLOBAL _main, :function
+; LABEL _main
+; ENTER 4
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; INT 1
+; DUP32
+; ADDR y
+; STINT
+; TRASH 4
+        ;; WHILE condition
+; ALIGN
+; LABEL _L2
+; ADDR y
+; LDINT
+; INT 3
+; LE
+; JZ _L3
+        ;; WHILE block
+; INT 1
+; DUP32
+; ADDR x
+; STINT
+; TRASH 4
+        ;; WHILE condition
+; ALIGN
+; LABEL _L4
+; ADDR x
+; LDINT
+; INT 6
+; LE
+; JZ _L5
+        ;; WHILE block
+; ADDR x
+; LDINT
+; INT 2
+; MOD
+; INT 1
+; EQ
+; JZ _L6
+; ADDR x
+; LDINT
+; INT 1
+; ADD
+; DUP32
+; ADDR x
+; STINT
+; TRASH 4
+; JMP _L4
+; JMP _L7
+; LABEL _L6
+; ADDR x
+; LDINT
+; CALL printi
+; TRASH 4
+; CALL println
+; LABEL _L7
+; ADDR x
+; LDINT
+; INT 1
+; ADD
+; DUP32
+; ADDR x
+; STINT
+; TRASH 4
+; JMP _L4
+; LABEL _L5
+; ADDR y
+; LDINT
+; INT 1
+; ADD
+; DUP32
+; ADDR y
+; STINT
+; TRASH 4
+; JMP _L2
+; LABEL _L3
+        ;; after body 
+; LABEL _L1
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; EXTERN printi
+; EXTERN println

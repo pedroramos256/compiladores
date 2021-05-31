@@ -1,0 +1,43 @@
+; BSS
+; ALIGN
+; LABEL x
+; SALLOC 4
+; BSS
+; ALIGN
+; LABEL y
+; SALLOC 4
+; TEXT
+; ALIGN
+; GLOBAL _main, :function
+; LABEL _main
+; ENTER 4
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; INT 2
+; INT 4
+; DUP32
+; ADDR x
+; STINT
+; ADD
+; DUP32
+; ADDR y
+; STINT
+; TRASH 4
+; ADDR y
+; LDINT
+; CALL printi
+; TRASH 4
+; CALL println
+        ;; after body 
+; LABEL _L1
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; EXTERN printi
+; EXTERN println

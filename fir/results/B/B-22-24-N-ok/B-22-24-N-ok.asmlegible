@@ -1,0 +1,45 @@
+; TEXT
+; ALIGN
+; GLOBAL _main, :function
+; LABEL _main
+; ENTER 4
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; INT 0
+; JZ _L2
+; RODATA
+; ALIGN
+; LABEL _L3
+; SSTRING (value omitted -- see below)
+; TEXT
+; ALIGN
+; ADDR _L3
+; CALL prints
+; TRASH 4
+; CALL println
+; JMP _L4
+; LABEL _L2
+; RODATA
+; ALIGN
+; LABEL _L5
+; SSTRING (value omitted -- see below)
+; TEXT
+; ALIGN
+; ADDR _L5
+; CALL prints
+; TRASH 4
+; CALL println
+; LABEL _L4
+        ;; after body 
+; LABEL _L1
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; EXTERN println
+; EXTERN prints

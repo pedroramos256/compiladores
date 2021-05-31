@@ -1,0 +1,111 @@
+<sequence_node size='2'>
+  <function_definition_node name='f' qualifier='private' type='void'>
+    <arguments>
+      <sequence_node size='1'>
+        <variable_declaration_node name='i' qualifier='private' type='integer'>
+          <initializer>
+          </initializer>
+        </variable_declaration_node>
+      </sequence_node>
+    </arguments>
+    <return_value>
+    </return_value>
+    <prologue>
+      <prologue_node>
+        <declarations>
+          <sequence_node size='1'>
+            <variable_declaration_node name='x' qualifier='private' type='integer'>
+              <initializer>
+              </initializer>
+            </variable_declaration_node>
+          </sequence_node>
+        </declarations>
+        <instructions>
+          <sequence_node size='1'>
+            <evaluation_node>
+              <assignment_node>
+                <variable_node>x</variable_node>
+                <rvalue_node>
+                  <variable_node>i</variable_node>
+                </rvalue_node>
+              </assignment_node>
+            </evaluation_node>
+          </sequence_node>
+        </instructions>
+      </prologue_node>
+    </prologue>
+    <body>
+      <block_node>
+        <declarations>
+          <sequence_node size='1'>
+            <variable_declaration_node name='x' qualifier='private' type='integer'>
+              <initializer>
+                <integer_node>4</integer_node>
+              </initializer>
+            </variable_declaration_node>
+          </sequence_node>
+        </declarations>
+        <instructions>
+        </instructions>
+      </block_node>
+    </body>
+    <epilogue>
+      <block_node>
+        <declarations>
+        </declarations>
+        <instructions>
+          <sequence_node size='1'>
+            <write_node newline='0'>
+              <arguments>
+                <sequence_node size='1'>
+                  <rvalue_node>
+                    <variable_node>x</variable_node>
+                  </rvalue_node>
+                </sequence_node>
+              </arguments>
+            </write_node>
+          </sequence_node>
+        </instructions>
+      </block_node>
+    </epilogue>
+  </function_definition_node>
+  <function_definition_node name='fir' qualifier='public' type='integer'>
+    <arguments>
+    </arguments>
+    <return_value>
+      <integer_node>0</integer_node>
+    </return_value>
+    <prologue>
+    </prologue>
+    <body>
+      <block_node>
+        <declarations>
+        </declarations>
+        <instructions>
+          <sequence_node size='2'>
+            <evaluation_node>
+              <function_call_node name='f'>
+                <arguments>
+                  <sequence_node size='1'>
+                    <integer_node>3</integer_node>
+                  </sequence_node>
+                </arguments>
+              </function_call_node>
+            </evaluation_node>
+            <evaluation_node>
+              <function_call_node name='f'>
+                <arguments>
+                  <sequence_node size='1'>
+                    <integer_node>8</integer_node>
+                  </sequence_node>
+                </arguments>
+              </function_call_node>
+            </evaluation_node>
+          </sequence_node>
+        </instructions>
+      </block_node>
+    </body>
+    <epilogue>
+    </epilogue>
+  </function_definition_node>
+</sequence_node>

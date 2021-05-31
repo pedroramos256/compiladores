@@ -1,0 +1,88 @@
+; BSS
+; ALIGN
+; LABEL f
+; SALLOC 4
+; TEXT
+; ALIGN
+; GLOBAL _main, :function
+; LABEL _main
+; ENTER 4
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; INT 2
+; INT 3
+; SHTL
+; ALLOC
+; SP
+; DUP32
+; ADDR f
+; STINT
+; TRASH 4
+; DOUBLE 6200.00
+; RODATA
+; ALIGN
+; LABEL _L1_cdk_emitter_internal
+; SDOUBLE 6200.00
+; TEXT
+; ADDR _L1_cdk_emitter_internal
+; LDDOUBLE
+; DUP64
+; SP
+; LDDOUBLE
+; ADDR f
+; LDINT
+; INT 0
+; INT 8
+; MUL
+; ADD
+; DSTORE
+; TRASH 8
+; DOUBLE 3100.00
+; RODATA
+; ALIGN
+; LABEL _L2_cdk_emitter_internal
+; SDOUBLE 3100.00
+; TEXT
+; ADDR _L2_cdk_emitter_internal
+; LDDOUBLE
+; DUP64
+; SP
+; LDDOUBLE
+; ADDR f
+; LDINT
+; INT 1
+; INT 8
+; MUL
+; ADD
+; DSTORE
+; TRASH 8
+; ADDR f
+; LDINT
+; INT 0
+; INT 8
+; MUL
+; ADD
+; LDDOUBLE
+; CALL printd
+; TRASH 8
+; ADDR f
+; LDINT
+; INT 1
+; INT 8
+; MUL
+; ADD
+; LDDOUBLE
+; CALL printd
+; TRASH 8
+        ;; after body 
+; LABEL _L1
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; EXTERN printd

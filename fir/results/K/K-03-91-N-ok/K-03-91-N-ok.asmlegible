@@ -1,0 +1,193 @@
+; BSS
+; ALIGN
+; LABEL f
+; SALLOC 4
+; TEXT
+; ALIGN
+; GLOBAL _main, :function
+; LABEL _main
+; ENTER 28
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; INT 4
+; LOCAL -8
+; STINT
+; LOCAL -8
+; LDINT
+; INT 3
+; SHTL
+; ALLOC
+; SP
+; LOCAL -12
+; STINT
+; INT 0
+; LOCAL -16
+; STINT
+        ;; WHILE condition
+; ALIGN
+; LABEL _L2
+; LOCAL -16
+; LDINT
+; LOCAL -8
+; LDINT
+; LT
+; JZ _L3
+        ;; WHILE block
+; INT 2
+; I2D
+; DUP64
+; SP
+; LDDOUBLE
+; LOCAL -12
+; LDINT
+; LOCAL -16
+; LDINT
+; INT 8
+; MUL
+; ADD
+; DSTORE
+; TRASH 8
+; LOCAL -16
+; LDINT
+; INT 1
+; ADD
+; DUP32
+; LOCAL -16
+; STINT
+; TRASH 4
+; JMP _L2
+; LABEL _L3
+; INT 0
+; LOCAL -20
+; STINT
+        ;; WHILE condition
+; ALIGN
+; LABEL _L4
+; LOCAL -20
+; LDINT
+; LOCAL -8
+; LDINT
+; LT
+; JZ _L5
+        ;; WHILE block
+; LOCAL -12
+; LDINT
+; LOCAL -20
+; LDINT
+; INT 8
+; MUL
+; ADD
+; LDDOUBLE
+; CALL printd
+; TRASH 8
+; LOCAL -20
+; LDINT
+; INT 1
+; ADD
+; DUP32
+; LOCAL -20
+; STINT
+; TRASH 4
+; JMP _L4
+; LABEL _L5
+; RODATA
+; ALIGN
+; LABEL _L6
+; SSTRING (value omitted -- see below)
+; TEXT
+; ALIGN
+; ADDR _L6
+; CALL prints
+; TRASH 4
+; INT 0
+; LOCAL -24
+; STINT
+        ;; WHILE condition
+; ALIGN
+; LABEL _L7
+; LOCAL -24
+; LDINT
+; LOCAL -8
+; LDINT
+; LT
+; JZ _L8
+        ;; WHILE block
+; INT 6
+; I2D
+; LOCAL -12
+; LDINT
+; LOCAL -24
+; LDINT
+; INT 8
+; MUL
+; ADD
+; LDDOUBLE
+; DDIV
+; DUP64
+; SP
+; LDDOUBLE
+; LOCAL -12
+; LDINT
+; LOCAL -24
+; LDINT
+; INT 8
+; MUL
+; ADD
+; DSTORE
+; TRASH 8
+; LOCAL -24
+; LDINT
+; INT 1
+; ADD
+; DUP32
+; LOCAL -24
+; STINT
+; TRASH 4
+; JMP _L7
+; LABEL _L8
+; INT 0
+; LOCAL -28
+; STINT
+        ;; WHILE condition
+; ALIGN
+; LABEL _L9
+; LOCAL -28
+; LDINT
+; LOCAL -8
+; LDINT
+; LT
+; JZ _L10
+        ;; WHILE block
+; LOCAL -12
+; LDINT
+; LOCAL -28
+; LDINT
+; INT 8
+; MUL
+; ADD
+; LDDOUBLE
+; CALL printd
+; TRASH 8
+; LOCAL -28
+; LDINT
+; INT 1
+; ADD
+; DUP32
+; LOCAL -28
+; STINT
+; TRASH 4
+; JMP _L9
+; LABEL _L10
+        ;; after body 
+; LABEL _L1
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; EXTERN printd
+; EXTERN prints

@@ -1,0 +1,63 @@
+; TEXT
+; ALIGN
+; LABEL f
+; ENTER 8
+        ;; before function PBE 
+        ;; before body 
+; LOCAL 12
+; LDDOUBLE
+; LOCAL 8
+; LDINT
+; I2D
+; DADD
+; DUP64
+; SP
+; LDDOUBLE
+; LOCAL -8
+; DSTORE
+; TRASH 8
+        ;; after body 
+; LABEL _L1
+        ;; after function PBE 
+; LOCAL -8
+; LDDOUBLE
+; STFVAL64
+; LEAVE
+; RET
+; TEXT
+; ALIGN
+; GLOBAL _main, :function
+; LABEL _main
+; ENTER 4
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; INT 10
+; I2D
+; INT 3
+; CALL f
+; TRASH 12
+; LDFVAL64
+; CALL printd
+; TRASH 8
+; INT 3
+; I2D
+; INT 2
+; CALL f
+; TRASH 12
+; LDFVAL64
+; CALL printd
+; TRASH 8
+; CALL println
+        ;; after body 
+; LABEL _L2
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; EXTERN printd
+; EXTERN println

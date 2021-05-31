@@ -1,0 +1,118 @@
+; TEXT
+; ALIGN
+; LABEL f
+; ENTER 4
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; LOCAL 8
+; LDINT
+; DUP32
+; LOCAL -4
+; STINT
+; TRASH 4
+; INT 1
+; I2D
+; DUP64
+; SP
+; LDDOUBLE
+; LOCAL -4
+; LDINT
+; INT 2
+; INT 8
+; MUL
+; ADD
+; DSTORE
+; TRASH 8
+        ;; after body 
+; LABEL _L1
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; TEXT
+; ALIGN
+; GLOBAL _main, :function
+; LABEL _main
+; ENTER 8
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; INT 3
+; INT 3
+; SHTL
+; ALLOC
+; SP
+; LOCAL -8
+; STINT
+; INT 100
+; I2D
+; DUP64
+; SP
+; LDDOUBLE
+; LOCAL -8
+; LDINT
+; INT 0
+; INT 8
+; MUL
+; ADD
+; DSTORE
+; TRASH 8
+; INT 40
+; I2D
+; DUP64
+; SP
+; LDDOUBLE
+; LOCAL -8
+; LDINT
+; INT 1
+; INT 8
+; MUL
+; ADD
+; DSTORE
+; TRASH 8
+; INT 0
+; I2D
+; DUP64
+; SP
+; LDDOUBLE
+; LOCAL -8
+; LDINT
+; INT 2
+; INT 8
+; MUL
+; ADD
+; DSTORE
+; TRASH 8
+; LOCAL -8
+; LDINT
+; CALL f
+; TRASH 4
+; LDFVAL32
+; TRASH 4
+; LOCAL -8
+; LDINT
+; INT 2
+; INT 8
+; MUL
+; ADD
+; LDDOUBLE
+; CALL printd
+; TRASH 8
+; CALL println
+        ;; after body 
+; LABEL _L2
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; EXTERN printd
+; EXTERN println

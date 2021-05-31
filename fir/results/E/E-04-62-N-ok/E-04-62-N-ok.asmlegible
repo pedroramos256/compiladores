@@ -1,0 +1,40 @@
+; TEXT
+; ALIGN
+; GLOBAL f, :function
+; LABEL f
+; ENTER 4
+        ;; before function PBE 
+        ;; before body 
+; INT 3
+; LOCAL -4
+; STINT
+; LOCAL -4
+; LDINT
+; CALL printi
+; TRASH 4
+        ;; after body 
+; LABEL _L1
+        ;; after function PBE 
+; LEAVE
+; RET
+; TEXT
+; ALIGN
+; GLOBAL _main, :function
+; LABEL _main
+; ENTER 4
+; INT 0
+; LOCAL -4
+; STINT
+        ;; before function PBE 
+        ;; before body 
+; CALL f
+; TRASH 0
+        ;; after body 
+; LABEL _L2
+        ;; after function PBE 
+; LOCAL -4
+; LDINT
+; STFVAL32
+; LEAVE
+; RET
+; EXTERN printi
